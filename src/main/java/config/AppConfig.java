@@ -1,8 +1,9 @@
 package config;
-import formatter.ProvinceFormatter;
-import repository.ICustomerRepository;
+import fomatter.ProvinceFormatter;
 import service.customer.CustomerService;
 import service.customer.ICustomerService;
+import service.product.IProductService;
+import service.product.ProductService;
 import service.province.IProvinceService;
 import service.province.ProvinceService;
 import org.springframework.beans.BeansException;
@@ -85,7 +86,7 @@ public class AppConfig implements WebMvcConfigurer, ApplicationContextAware {
     public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
         LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
         em.setDataSource(dataSource());
-        em.setPackagesToScan("model"); // cấp cấp vị trí các model mà EntityManager cần tạo
+        em.setPackagesToScan("model"); // c cấp vị trí các model mà EntityManager cần tạo
 
         JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
         em.setJpaVendorAdapter(vendorAdapter);
@@ -131,5 +132,10 @@ public class AppConfig implements WebMvcConfigurer, ApplicationContextAware {
     @Bean
     public IProvinceService provinceService(){
         return new ProvinceService();
+    }
+
+    @Bean
+    public IProductService productService(){
+        return new ProductService();
     }
 }

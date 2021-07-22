@@ -2,7 +2,8 @@ package model;
 
 import javax.persistence.*;
 
-@Entity // đánh dấu đây là Entity => hibernate sẽ tạo bảng trong CSDL
+@Entity
+// đánh dấu đây là Entity để Hibernate sẽ tạo bảng trong CSDL
 @Table(name = "customers")
 // tên mặc định là customer => @table để cài đặt lại thuộc tính của 1 bảng vd: đổi tên thành customers
 public class Customer {
@@ -32,7 +33,7 @@ public class Customer {
 
     @Override
     public String toString() {
-        return String.format("Customer[id=%d, firstName='%s', lastName='%s']", id, firstName, lastName);
+        return String.format("Customer[id=%d, firstName='%s', lastName='%s', provine=%s]", id, firstName, lastName, province);
     }
 
     public Long getId() {

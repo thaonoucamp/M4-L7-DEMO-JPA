@@ -1,4 +1,4 @@
-package formatter;
+package fomatter;
 
 
 import model.Province;

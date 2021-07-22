@@ -12,7 +12,7 @@ public class Province {
 
     private String name;
 
-    @OneToMany(targetEntity = Customer.class)
+    @OneToMany(targetEntity = Customer.class) // danh dau moi quan he 1-n trong database;
     private List<Customer> customers;
 
     public Province() {

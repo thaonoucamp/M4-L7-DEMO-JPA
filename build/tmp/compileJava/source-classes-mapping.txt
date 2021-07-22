@@ -1,13 +1,19 @@
 controller/CustomerController.java
  controller.CustomerController
+repository/IProductRepository.java
+ repository.IProductRepository
 model/Province.java
  model.Province
+service/product/IProductService.java
+ service.product.IProductService
 repository/IProvinceRepository.java
  repository.IProvinceRepository
 service/customer/CustomerService.java
  service.customer.CustomerService
 fomatter/ProvinceFormatter.java
- formatter.ProvinceFormatter
+ fomatter.ProvinceFormatter
+service/product/ProductService.java
+ service.product.ProductService
 service/IGeneralService.java
  service.IGeneralService
 model/Customer.java
@@ -18,11 +24,15 @@ service/customer/ICustomerService.java
  service.customer.ICustomerService
 service/province/ProvinceService.java
  service.province.ProvinceService
+model/Product.java
+ model.Product
 service/province/IProvinceService.java
  service.province.IProvinceService
 controller/ProvinceController.java
  controller.ProvinceController
-config/AppConfig.java
- config.AppConfig
 config/AppInitializer.java
  config.AppInitializer
+config/AppConfig.java
+ config.AppConfig
+controller/ProductController.java
+ controller.ProductController
